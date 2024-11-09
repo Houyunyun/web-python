@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 # 用户在浏览器上访问/show/info时，会执行show_info函数，并返回字符串'This is a test page'
 @app.route('/')
 def show_info():
-    return 'This is a test page'
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run()

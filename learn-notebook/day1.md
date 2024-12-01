@@ -100,7 +100,7 @@ if __name__ == '__main__':
 ```
 注意：这两个标签结合CSS可以定制自己的功能。
 
-### 超链接
+### 1.超链接
 ```html
 跳转到其他人的网页
 <a href="www.baidu.com">点击跳转</a>
@@ -110,12 +110,232 @@ if __name__ == '__main__':
 <a href="http://127.0.0.1:5000/get/news">点击跳转</a>
 <a href="/get/news">点击跳转</a>
 ```
-### 图片
+```html
+# 当前页面打开
+<a href="https://item.jd.com/100008348542.html">点击跳转</a>
+
+# 新页面打开
+<a href="https://item.jd.com/100008348542.html"  target="_blank">点击跳转</a>
+
+```
+
+### 2.图片
+
 ```html
 <imag src="图片地址"/>
 ```
 ```html
 显示别人的网址：
 <imag src="其他网站的图片地址"/>
+```
+
+### 3.列表
+
+```html
+# 无序列表
+<ul>
+    <li>中国移动</li>
+    <li>中国联通</li>
+    <li>中国移动</li>
+</ul>
+```
+
+```html
+# 有序列表
+<ol>
+    <li>中国移动</li>
+    <li>中国联通</li>
+    <li>中国移动</li>
+</ol>
+```
+
+### 4.表格标签
+
+```html
+<table>
+    <thead>
+        <tr> <th>ID</th> <th>姓名</th> <th>年龄</th> </tr>  # 表头
+    </thead>
+    <tbody>
+        <tr> <td>10</td>	<td>张三</td>		<td>19</td>	</tr>
+        <tr> <td>10</td>	<td>李四</td>		<td>20</td>	</tr>
+        <tr> <td>10</td>	<td>王二麻子</td>	<td>21</td>	</tr>
+        <tr> <td>10</td>	<td>王五</td>		<td>22</td>	</tr>
+    </tbody>
+</table>
+```
+### 5.input 系列
+```html
+    <!-- 输入框 -->
+    <input type="text" name="content" value="请输入内容">
+    <input type="password">
+
+    <!-- 上传文件按钮 -->
+    <input type="file">
+
+    <!-- 单选择按钮，name的值要相同，这样才能让两者互斥 -->
+    <input type="radio" name="n1"> 男
+    <input type="radio" name="n1"> 女
+
+    <!-- 多选按钮 -->
+    <input type="checkbox" name="n2"> 足球
+    <input type="checkbox" name="n2"> 篮球
+    <input type="checkbox" name="n2"> 乒乓球
+
+    <input type="button" value="提交">  <!-- 普通按钮-->
+    <input type="submit" value="提交">  <!-- 提交表单-->
+```
+
+### 6.下拉框
+```html
+    <!-- 单选下拉框 -->
+    <select name="city">
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+    </select>
+    <!-- 多选下拉框 -->
+    <select name="city" multiple>
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+    </select>
+```
+### 7.多行文本
+```html
+    <!-- 文本域宽度为30，高度为10，可以输入多行文本 -->
+    <textarea name="content" cols="30" rows="10">请输入内容</textarea>
+```
+
+
+
+# 总结
+
+- 学习的标签
+```htlm
+  <h1></h1>
+  <div></div>
+  <span></span>
+  <a></a>
+  <img />
+```
+
+- 划分
+
+```html
+- 块级标签
+    <h1></h1>
+    <div></div>
+- 行内标签
+    <span></span>
+    <a></a>
+    <imag />
+```
+
+- 嵌套
+
+```html
+    <div>
+        <span>xxx</span>
+        <img />
+        <a>超链接</a>
+
+```
+- 案例：商品列表
+```html
+<!DOCTYPE  html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h1>商品列表</h1>
+    <div>
+        <span style="color: blue;">
+            <p>商品列表</p>
+            <ul>
+
+                <li>
+                    <a href="https://item.jd.com/100008348542.html" target="_blank">
+                        <img src="/static/01.jpg",style="width: 150px">
+                        华为手机
+                    </a>
+                </li>
+                <li>
+                    <a href="https://item.jd.com/100008348543.html" target="_blank">
+                        <img src="/static/02.jpg",style="width: 150px">
+                        小米手机
+                    </a>
+                </li>
+                <li>
+                    <a href="https://item.jd.com/100008348544.html" target="_blank">
+                        <img src="/static/03.jpg",style="width: 150px">
+                        苹果手机
+                    </a>
+                </li>
+            </ul>
+        </span>
+    </div>
+</body>
+</html>
+```
+
+- 案例：用户列表
+```html
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <h1>用户列表</h1>
+    <table border="1">
+        <thead>
+            <tr> <th>头像</th> <th>ID</th> <th>姓名</th> <th>年龄</th> <th>更多信息</th> <th>操作</th> </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <td>10</td> 
+                <td><img src="/static/01.jpg" alt="" height="50px"></td> 
+                <td>张三</td> 
+                <td>19</td>	
+                <td><a href="https://www.youtube.com/" target="_blank">查看详情</a></td>
+                <td>编辑 删除</td>
+            </tr>
+            <tr> 
+                <td>10</td> 
+                <td><img src="/static/01.jpg" alt="" height="50px"></td> 
+                <td>李四</td> 
+                <td>20</td>	
+                <td><a href="https://www.youtube.com/" target="_blank">查看详情</a></td>
+                <td>编辑 删除</td>	
+            </tr>
+            <tr> 
+                <td>10</td> 
+                <td><img src="/static/01.jpg" alt="" height="50px"></td> 
+                <td>王二麻子</td> 
+                <td>21</td>	
+                <td><a href="https://www.youtube.com/" target="_blank">查看详情</a></td>
+                <td>编辑 删除</td>
+            </tr>
+            <tr> 
+                <td>10</td> 
+                <td><img src="/static/01.jpg" alt="" height="50px"></td> 
+                <td>王五</td> 
+                <td>22</td>	
+                <td><a href="https://www.youtube.com/" target="_blank">查看详情</a></td>
+                <td>编辑 删除</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+```
+![alt text](image-1.png)
+
+
 
 

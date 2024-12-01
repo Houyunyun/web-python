@@ -8,7 +8,6 @@
     <h1>精神世界</h1>
     <div>
         <span style="color: blue;">
-            <p>我喜欢的事物</p>
             <ul>
                 <li><a href="https://www.bilibili.com/video/BV1pY4y1d7o1/?spm_id_from=333.337.search-card.all.click">音乐</a></li>
                 <li><a href="https://www.bilibili.com/bangumi/play/ss68613?theme=movie&spm_id_from=333.337.0.0">电影</a></li>
@@ -18,10 +17,82 @@
     </div>
     <div>
         <span style="color: red;">
-            <p>新闻</p>
+            <!-- <p>新闻</p> -->
         </span>
-        <a href="/get/news">获取新闻资讯</a>
-    </div>       
+        <a href="/get/news" target="_blank">获取新闻资讯</a>
+    </div>  
+
+    <div>
+        <span style="color: blue;">
+            <!-- <p>注册</p> -->
+        </span>
+        <a href="/register" target="_blank">注册账户</a>
+    </div>  
+
+    <div>
+        <span style="color: blue;">
+            <!-- <p>用户列表</p> -->
+        </span>
+        <a href="/users/list" target="_blank">查看用户列表</a>
+    </div>
+
+    <div>
+        <span style="color: blue;">
+            <!-- <p>商品列表</p> -->
+        </span>
+        <a href="/goods/list" target="_blank">查看商品列表</a>
+    </div>
+    
+
+    <table border="1">
+        <thead>
+            <tr> <th>ID</th> <th>姓名</th> <th>年龄</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>10</td>	<td>张三</td>		<td>19</td>	</tr>
+            <tr> <td>10</td>	<td>李四</td>		<td>20</td>	</tr>
+            <tr> <td>10</td>	<td>王二麻子</td>	<td>21</td>	</tr>
+            <tr> <td>10</td>	<td>王五</td>		<td>22</td>	</tr>
+        </tbody>
+    </table>
+
+    <h1>输入内容</h1>
+    <input type="text" name="content" value="请输入内容">
+    <input type="password">
+    <input type="file">
+
+    <input type="radio" name="n1"> 男
+    <input type="radio" name="n1"> 女
+
+    <input type="checkbox" name="n2"> 足球
+    <input type="checkbox" name="n2"> 篮球
+    <input type="checkbox" name="n2"> 乒乓球
+
+    <input type="button" value="提交">
+    <input type="submit" value="提交">
+
+    <button>提交</button>
+
+    <h1>下拉框</h1>
+    <!-- 单选下拉框 -->
+    <select name="city">
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+    </select>
+    <!-- 多选下拉框 -->
+    <select name="city" multiple>
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+    </select>
+
+    <h1>多行文本框</h1>
+    <!-- 文本域宽度为30，高度为10，可以输入多行文本 -->
+    <textarea name="content" cols="30" rows="10"></textarea>
+    <button>提交</button>
+
+
 </body>
 </html>
 
